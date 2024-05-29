@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url(./fonts.scss);
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    color: white;
+}
+
+*::before, ::after{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
