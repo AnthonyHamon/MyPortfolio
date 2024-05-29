@@ -1,0 +1,67 @@
+ @use '../../../styles.scss' as *;
+
+
+.above-the-fold {
+    background-image: url(../../../assets/img/above-the-fold-bg.jpg);
+    background-position: bottom right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+
+    >img {
+        width: 700px;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        right: 10%
+    }
+}
+
+.hello-world-ctn {
+    @include flex(center, center);
+    height: 100%;
+    width: 50%;
+
+    .hello-world {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 32px;
+
+        >h1 {
+            font-size: 36px;
+        }
+
+        >p {
+            display: flex;
+            flex-direction: column;
+            font-size: 36px;
+
+            >span {
+                text-align: center;
+                font-size: 48px;
+            }
+        }
+
+        >a {
+            font-size: 18px;
+            color: black;
+            background-color: transparent;
+            border: none;
+            border-radius: 10px;
+            padding: 24px;
+            margin-top: 32px;
+            background-color: white;
+            transition: all 0.225s ease-in-out;
+            &:hover{
+                cursor: pointer;
+                color: white;
+                background-color: gray;
+                transform: scale(1.2);
+            }
+        }
+    }
+}
