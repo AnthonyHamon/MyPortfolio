@@ -1,0 +1,63 @@
+@use '../../../styles.scss' as *;
+
+:host{
+    display: block;
+    height: 100vh;
+}
+
+.about-me-section{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+section{
+
+    @include flex(center, center);
+    height: 100%;
+    gap: 48px;
+
+    >img{
+        width:  auto;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid black;
+        box-shadow: 0 0 10px 0;
+    }
+    .about-me{
+        @include flex(start, start);
+        flex-direction: column;
+        width: 35vw;
+        margin-left: 48px;
+           
+        >h2{
+            font-size: 90px;
+        }
+        >div{
+            @include flex(start, center);
+            flex-direction: column;
+            gap: 35px;
+        }
+    }
+}
+
+.more-about-me{
+     @include flex(start);
+     flex-direction: column;
+     gap: 35px;
+     >div{
+        @include flex(start);
+        gap: 24px;
+        >img{
+            height: 50px;
+            width: auto;
+        }
+     }
+}
+
+.about-me-icon-ctn{
+    @include flex(center);
+    min-width: 100px;
+}
+

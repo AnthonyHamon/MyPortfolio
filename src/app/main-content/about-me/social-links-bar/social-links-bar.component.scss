@@ -1,0 +1,30 @@
+@use '../../../../styles.scss' as *;
+
+.social-links-ctn{
+    @include flex(start);
+        background-color: white;
+        width: 100%;
+        gap: 42px;
+        box-shadow: 0px -5px 10px white;
+        position: absolute;
+
+    >hr {
+        border-color: black;
+        border-width: 2px;
+        border-style: solid;
+        width: 80px;
+        border-top-right-radius: 2px; 
+        border-bottom-right-radius: 2px; 
+    }
+    
+    .social-links {
+        @include flex(start);
+        padding: 12px;
+        gap: 42px;
+
+        >a {
+            @include flex(start);
+            color: black;
+        }
+    }
+}
