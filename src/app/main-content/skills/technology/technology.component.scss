@@ -1,0 +1,21 @@
+@use '../../../../styles.scss' as *;
+
+.technology-link{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 88px;
+    height: 100px;
+
+    >a{
+         @include flex(start);
+         flex-direction: column;
+         color: white;
+
+         >span{
+            text-align: center;
+         }
+    }
+}

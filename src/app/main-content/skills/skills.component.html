@@ -1,1 +1,15 @@
-<p>skills works!</p>
+<main class="skills">
+    <section>
+        <div class="skill-list">
+            @for (technology of skills; track $index) {
+            <app-technology [technology]="technology"></app-technology>
+            }
+        </div>
+        <div class="my-skills">
+            <h2>My Skills</h2>
+            <span>I have built projects with diverse front-end technologies and concepts, gaining valuable
+                experience.</span>
+            <a href="">let's have a talk</a>
+        </div>
+    </section>
+</main>

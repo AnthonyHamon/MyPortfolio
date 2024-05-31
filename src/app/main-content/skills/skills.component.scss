@@ -1,0 +1,44 @@
+@use '../../../styles.scss' as *;
+@use '../landing-page/landing-page.component.scss' as btn;
+
+* {
+    color: white;
+}
+
+.skills {
+    box-shadow: 0 -5px 10px 0 black;
+    height: 50vh;
+    @include flex(start);
+
+    >section {
+        @include flex(space-around);
+        width: 100%;
+        gap: 54px;
+        padding: 0 100px;
+    }
+}
+
+.skill-list {
+    @include flex(start);
+    flex-wrap: wrap;
+    gap: 54px;
+}
+
+.my-skills {
+    @include flex(center);
+    flex-direction: column;
+    max-width: 30vw;
+    ;
+
+    >h2 {
+        font-size: 90px;
+    }
+
+    >span {
+        text-align: center
+    }
+
+    >a {
+        @include btn.getInTouchBtn();
+    }
+}
