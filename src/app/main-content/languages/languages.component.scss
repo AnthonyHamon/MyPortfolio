@@ -1,0 +1,14 @@
+@use '../../../styles.scss' as f;
+
+main{
+    @include f.flex(start, start);
+    flex-direction: column;
+    padding: 0 100px;
+    height: 50vh;
+    width: 100%;
+    color: white;
+    
+    >h2{
+        font-size: 54px;
+    }
+}

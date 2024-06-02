@@ -5,10 +5,11 @@
     color: white;
 }
 
-.skills {
+.skills-ctn {
     box-shadow: 0 -5px 10px 0 black;
     height: 50vh;
-    @include flex(start);
+    @include flex(center);
+    flex-direction: column;
 
     >section {
         @include flex(space-around);
@@ -41,4 +42,8 @@
     >a {
         @include btn.getInTouchBtn();
     }
+}
+
+.languages{
+    @include flex(start, start);
 }
