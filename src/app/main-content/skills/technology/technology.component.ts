@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { rubberBandAnimation } from 'angular-animations';
 
 
 
@@ -8,12 +9,26 @@ import { Component, Input } from '@angular/core';
   imports: [],
   templateUrl: './technology.component.html',
   styleUrl: './technology.component.scss',
-  animations: []
+  animations: [rubberBandAnimation()],
 })
-export class TechnologyComponent {
-  @Input()technology = {
-    name: '',
-    image:'',
-    link:'',
-  }; 
-}
+
+
+  export class TechnologyComponent {
+
+    animationState = false;
+
+    @Input() technology = {
+      name: '',
+      image: '',
+      link: '',
+    };
+
+    animateTechnologyLink(){
+        this.animationState = true;
+        setTimeout(() => {
+          this.animationState = false;
+        }, 1);
+    }
+
+  }
+

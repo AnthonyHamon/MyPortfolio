@@ -61,5 +61,5 @@ export class SkillsComponent {
       image: 'material-design.png',
       link: '',
     },
-  ]
+  ];
 }
