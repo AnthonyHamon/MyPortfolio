@@ -1,0 +1,20 @@
+@use '../../../../styles.scss' as flex;
+
+
+section {
+    @include flex.flex(start);
+    gap: 54px;
+
+    >label {
+        font-size: 24px;
+        min-width: 100px;
+    }
+
+    .mat-mdc-progress-bar.mat-accent {
+        --mdc-linear-progress-active-indicator-color: white;
+        --mdc-linear-progress-track-height: 10px !important;
+        --mdc-linear-progress-active-indicator-height: 10px;
+        border-radius: 5px;
+        background-color: rgb(55, 55, 55);
+    }
+}

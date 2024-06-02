@@ -3,6 +3,7 @@
 main{
     @include f.flex(start, start);
     flex-direction: column;
+    gap: 36px;
     padding: 0 100px;
     height: 50vh;
     width: 100%;
@@ -10,5 +11,13 @@ main{
     
     >h2{
         font-size: 54px;
+    }
+
+    >section{
+        @include f.flex(start, stretch);
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 36px;
+        width: 100%;
     }
 }

@@ -1,6 +1,8 @@
 <main>
     <h2>Spoken Languages</h2>
     <section>
-        
+        @for (language of languages; track $index) {
+            <app-language-progress-bar [language]='language'></app-language-progress-bar>
+        }
     </section>
 </main>
