@@ -15,7 +15,6 @@
     >section {
         @include flex(center);
         width: 100%;
-        gap: 54px;
     }
 }
 
@@ -30,6 +29,7 @@
     @include flex(center);
     flex-direction: column;
     max-width: 30vw;
+    padding-left: 54px;
     ;
 
     >h2 {
