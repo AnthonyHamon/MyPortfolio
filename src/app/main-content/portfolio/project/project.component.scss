@@ -1,0 +1,76 @@
+@use '../../../../styles.scss' as f;
+
+
+:host {
+    width: 70%;
+    @include f.flex(start)
+}
+
+.project-card {
+    @include f.flex(start);
+    width: 30%;
+    width: 100%;
+    background-color: #141414;
+    border-radius: 24px;
+    margin-left: 36px;
+    box-shadow: 20px 0px 20px #141414;
+    gap: 54px;
+    cursor: pointer;
+
+    >img {
+        height: 420px;
+        width: 392px;
+        object-fit: cover;
+    }
+
+    // >section{
+    //     display: none;
+    // }
+}
+
+.project-description {
+    @include f.flex(start, start);
+    flex-direction: column;
+    gap: 18px;
+    color: white;
+
+    >div {
+        @include f.flex(start, start);
+        flex-direction: column;
+        gap: 8px;
+
+        >h3 {
+            font-size: 36px;
+        }
+
+        >span {
+            font-size: 24px;
+            color: grey;
+        }
+
+        >a {
+            color: white;
+            font-size: 18px;
+            transition: all 225ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.15);
+            }
+        }
+    }
+}
+
+
+.links {
+    gap: 18px !important;
+}
+
+#liveTestLink {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 14px;
+
+    &:hover {
+        background-color: grey;
+    }
+}

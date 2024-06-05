@@ -1,28 +1,29 @@
 @use '../../../styles.scss' as *;
 @use '../landing-page/landing-page.component.scss' as btn;
+@use '../../app.component.scss' as shadow;
 
 * {
     color: white;
 }
 
 .skills-ctn {
-    box-shadow: 0 -5px 10px 0 black;
+    @include shadow.top-shadow(#141414);
     height: 50vh;
     @include flex(center);
     flex-direction: column;
 
     >section {
-        @include flex(space-around);
+        @include flex(center);
         width: 100%;
         gap: 54px;
-        padding: 0 100px;
     }
 }
 
 .skill-list {
-    @include flex(start);
+    @include flex(center);
     flex-wrap: wrap;
     gap: 54px;
+    max-width: 40%;
 }
 
 .my-skills {

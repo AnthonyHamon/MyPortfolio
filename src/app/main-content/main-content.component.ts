@@ -3,7 +3,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { LanguagesComponent } from './languages/languages.component';
-import { ProjectsComponent } from './projects/projects.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @Component({
   selector: 'app-main-content',
@@ -13,7 +13,7 @@ import { ProjectsComponent } from './projects/projects.component';
     AboutMeComponent,
     SkillsComponent,
     LanguagesComponent,
-    ProjectsComponent,
+    PortfolioComponent,
   ],
 
   templateUrl: './main-content.component.html',

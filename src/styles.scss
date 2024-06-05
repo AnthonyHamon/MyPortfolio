@@ -20,7 +20,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #141414;
 }
 
 a {
@@ -28,3 +28,16 @@ a {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mdc-linear-progress__bar{
+    transition: transform 1s 0ms cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+/* Change the transition time for the progress bar value */
+.mat-progress-bar-buffer {
+    transition: none !important;
+  }
+  
+  .mat-progress-bar-fill::after {
+    transition: transform 1s ease; /* Adjust the timing value as needed */
+  }

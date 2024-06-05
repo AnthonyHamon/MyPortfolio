@@ -1,11 +1,13 @@
 @use '../../../../styles.scss' as *;
+@use '../../../app.component.scss' as shadow;
 
 .social-links-ctn{
     @include flex(start);
-        background-color: white;
+        background-color: rgb(244, 244, 246);
+        @include shadow.top-shadow();
+
         width: 100%;
         gap: 42px;
-        box-shadow: 0px -5px 10px white;
         position: absolute;
 
     >hr {

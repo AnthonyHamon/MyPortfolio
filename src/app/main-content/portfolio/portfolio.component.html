@@ -1,0 +1,8 @@
+<main class="portfolio">
+
+    <h2>My Work</h2>
+    @for (project of portfolio; track $index) {
+        <app-project [project]='project'></app-project>
+    }
+
+</main>
