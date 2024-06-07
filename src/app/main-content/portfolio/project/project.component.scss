@@ -1,15 +1,23 @@
 @use '../../../../styles.scss' as f;
 
+$main-width: 100%;
+
+
+main {
+    width: 100%;
+}
 
 :host {
     width: 70%;
-    @include f.flex(start)
+    @include f.flex(start);
+    position: relative;
 }
 
 .project-card {
     @include f.flex(start);
-    width: 30%;
-    width: 100%;
+    // width: 30%;
+    width: $main-width;
+    height: 350px;
     background-color: #141414;
     border-radius: 24px;
     margin-left: 54px;
@@ -18,21 +26,21 @@
     cursor: pointer;
 
     >img {
-        height: 420px;
+        height: 350px;
         width: 392px;
         object-fit: cover;
     }
-
-    // >section{
-    //     display: none;
-    // }
 }
 
 .project-description {
-    @include f.flex(start, start);
+    @include f.flex(center, start);
     flex-direction: column;
     gap: 18px;
-    color: white;
+    color: #f4f4f6;
+    position: absolute;
+    left: 34%;
+    margin-left: 54px;
+
 
     >div {
         @include f.flex(start, start);
@@ -48,7 +56,8 @@
             color: grey;
         }
 
-        >p{
+        >p {
+            width: 100%;
             padding-right: 54px;
         }
 
@@ -78,3 +87,11 @@
         background-color: grey;
     }
 }
+
+// .openedDescription {
+//     display: flex;
+// }
+
+// .closedDescription {
+//     display: none;
+// }
