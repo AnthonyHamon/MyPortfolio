@@ -1,6 +1,6 @@
 import { animate, state, style, trigger, transition } from '@angular/animations';
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project',
@@ -14,7 +14,7 @@ import { Component, Input } from '@angular/core';
         width: '100%',
       })),
       state('closed', style({
-        width: '30%',
+        width: '40%',
       })),
       transition('open <=> closed', [
         animate('0.4s')
@@ -26,6 +26,8 @@ export class ProjectComponent {
 
   isOpen: boolean = false;
 
+  @Input() odd = false;
+
   @Input() project = {
     projectName: 'Fantasia Adventure',
     projectPicture: 'asset/img/projects/f-a-gaming-display.png',
@@ -33,6 +35,9 @@ export class ProjectComponent {
     githubLink: '',
     usedTechnologies: 'JavaScript, HTML, CSS',
   };
+
+  @HostBinding('class.reverse-card') reverseCard = true;
+
 
 
 

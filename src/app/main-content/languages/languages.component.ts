@@ -20,7 +20,7 @@ export class LanguagesComponent {
     },
     {
       language: 'french',
-      percentage: 95,
+      percentage: 100,
     },
   ]
 }

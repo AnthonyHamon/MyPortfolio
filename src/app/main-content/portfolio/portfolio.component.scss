@@ -9,6 +9,7 @@
     @include shadow.top-shadow();
     width: 100%;
     background-color: rgb(244, 244, 246);
+    // background-color: #141414;
     gap: 36px;
 
     >h2{
@@ -18,4 +19,8 @@
         color: black;
         margin-top: 54px;
     }
+}
+
+.reverse-card{
+    justify-content: end !important;
 }

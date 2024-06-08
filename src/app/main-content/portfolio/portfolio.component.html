@@ -1,8 +1,8 @@
 <main class="portfolio">
 
     <h2>My Work</h2>
-    @for (project of portfolio; track $index) {
-        <app-project [project]='project'></app-project>
+    @for (project of portfolio; track $index; let odd = $odd) {
+        <app-project [project]='project' [class.reverse-card]="odd" [odd]="odd"></app-project>
     }
 
 </main>
