@@ -1,0 +1,46 @@
+@use '../../../styles.scss' as f;
+
+
+.footer {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+
+    >hr {
+        align-self: center;
+        width: 80%;
+    }
+
+
+    >section {
+        @include f.flex(space-between);
+        width: 100%;
+        padding: 36px 0;
+
+        >a {
+            >img {
+                width: 250px;
+                height: 65px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.footer-links {
+    @include f.flex(center);
+    flex-direction: column;
+    gap: 8px;
+
+    >div {
+        @include f.flex(space-evenly);
+        width: 250px;
+        color: white;
+
+        >a:hover {
+            transform: scale(1.15);
+            cursor: pointer;
+        }
+    }
+}

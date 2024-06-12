@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import { ProjectComponent } from './project/project.component';
 
 @Component({
@@ -8,8 +8,7 @@ import { ProjectComponent } from './project/project.component';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
-export class PortfolioComponent {
-
+export class PortfolioComponent{
 
   portfolio = [
     {

@@ -11,15 +11,15 @@ import { LanguageProgressBarComponent } from './language-progress-bar/language-p
 export class LanguagesComponent {
   languages = [
     {
-      language: 'english',
+      language: 'English',
       percentage: 75,
     },
     {
-      language: 'german',
+      language: 'German',
       percentage: 85,
     },
     {
-      language: 'french',
+      language: 'French',
       percentage: 100,
     },
   ]

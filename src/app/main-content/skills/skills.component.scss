@@ -1,4 +1,4 @@
-@use '../../../styles.scss' as *;
+@use '../../../styles.scss' as f;
 @use '../landing-page/landing-page.component.scss' as btn;
 @use '../../app.component.scss' as shadow;
 
@@ -9,24 +9,25 @@
 .skills-ctn {
     @include shadow.top-shadow(#141414);
     height: 50vh;
-    @include flex(center);
+    @include f.flex(center);
     flex-direction: column;
+    width: 100%;
+
 
     >section {
-        @include flex(center);
-        width: 100%;
+        @include f.flex(center);
     }
 }
 
 .skill-list {
-    @include flex(center);
+    @include f.flex(center);
     flex-wrap: wrap;
     gap: 54px;
     max-width: 40%;
 }
 
 .my-skills {
-    @include flex(center);
+    @include f.flex(center);
     flex-direction: column;
     max-width: 30vw;
     padding-left: 54px;
@@ -46,5 +47,5 @@
 }
 
 .languages{
-    @include flex(start, start);
+    @include f.flex(start, start);
 }

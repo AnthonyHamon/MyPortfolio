@@ -1,8 +1,15 @@
 <main class="portfolio">
 
     <h2>My Work</h2>
-    @for (project of portfolio; track $index; let odd = $odd) {
-        <app-project [project]='project' [class.reverse-card]="odd" [odd]="odd"></app-project>
+    @for (project of portfolio; track project; let odd = $odd; let first = $first) {
+        
+        <!-- <app-project (openStatus)="openStatus($event)" [otherProjectOpenStatus]="otherProjectOpenStatus" [project]='project' [class.reverse-card]="odd" [odd]="odd" [firstProject]="first"></app-project> -->
+        <!-- <app-project (openStatus)="openFirstProject($event, $index)" [project]='project' [class.reverse-card]="odd" [odd]="odd" [first]="first"></app-project> -->
+
+        <!-- <app-project [project]='project' [class.reverse-card]="odd" [odd]="odd" [firstProject]="first"></app-project> -->
+
+        <app-project [project]='project' [class.reverse-card]="odd" [odd]="odd" [firstProject]="first"></app-project>
+
     }
 
 </main>

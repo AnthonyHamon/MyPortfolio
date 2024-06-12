@@ -1,0 +1,85 @@
+@use '../../app.component.scss' as shadow;
+@use '../../../styles.scss' as f;
+
+
+.contact {
+    @include shadow.top-shadow(#141414);
+    @include f.flex(center);
+
+    >section {
+        @include f.flex(start);
+        width: 80%;
+        padding: 54px 0;
+
+        >form {
+            @include f.flex(start, start);
+            flex-direction: column;
+            gap: 16px;
+            padding: 54px;
+            background-color: #292929;
+            border-radius: 24px;
+            color: white;
+            flex-grow: 0.25;
+
+
+            >section {
+                width: 100%;
+                >div {
+                    >span {
+                        font-size: 24px;
+                    }
+
+                    >h3 {
+                        font-size: 90px;
+                    }
+                }
+            }
+        }
+    }
+
+    .inputs {
+        @include f.flex(start, start);
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+        padding: 16px;
+        border-radius: 8px;
+        border-style: none;
+        outline: none;
+        color: white;
+
+        > {
+            input {
+                @include f.flex(center);
+                width: 100%;
+                padding: 16px 24px;
+                border-radius: 8px;
+                border-style: none;
+                background-color: #1F1F1F;
+                outline: none;
+                color: white;
+            }
+        }
+    }
+
+
+    button {
+        @include f.flex(center);
+        border-radius: 8px;
+        background-color: #141414;
+        color: white;
+        outline: none;
+        border-style: none;
+        font-size: 18px;
+        margin-left: 16px;
+        width: 130px;
+        height: 50px;
+
+        &:hover{
+            cursor: pointer;
+            transition: all .225s ease-in-out;
+            background-color: grey;
+        }
+    }
+
+}

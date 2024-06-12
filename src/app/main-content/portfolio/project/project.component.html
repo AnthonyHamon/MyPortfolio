@@ -1,8 +1,6 @@
-<main (mouseenter)="toggleProjectDescription()" (mouseleave)="toggleProjectDescription()" [class.reverse-card]="odd">
-    <section [@slideInOutAnimation]="isOpen ? 'open' : 'closed' " class="project-card" [class.reverse-card]="odd">
+<main [ngClass]="{'project-card': true, 'reverse-card': odd}">
         <img src="{{ project.projectPicture }}" alt="">
-        @if (isOpen) {
-        <section class="project-description" [class.reverse-project-description]="odd">
+        <section [ngClass]="{'project-description': true, 'reverse-project-description': odd}">
             <div>
                 <h3>{{ project.projectName }}</h3>
                 <span>{{ project.usedTechnologies }}</span>
@@ -15,9 +13,5 @@
                 <a href="#"><img src="assets/icons/github-white.png" alt=""></a>
                 <a id="liveTestLink" href="#">Live testen</a>
             </div>
-        </section>
-        }  
     </section>
- 
-
 </main>
