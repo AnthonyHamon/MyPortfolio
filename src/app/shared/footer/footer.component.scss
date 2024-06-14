@@ -32,6 +32,7 @@
     @include f.flex(center);
     flex-direction: column;
     gap: 8px;
+    margin-right: 24px;
 
     >div {
         @include f.flex(space-evenly);

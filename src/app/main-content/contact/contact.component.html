@@ -1,6 +1,6 @@
 <main class="contact">
     <section>
-        <form action="">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <section>
                 <div>
                     <span>GET IN TOUCH</span>
@@ -9,18 +9,27 @@
         
                 <div class="inputs">
                     <label for="name">Your Name</label>
-                    <input type="text" placeholder="What's your name?">
+                    <input #name="ngModel" minlength="3" [(ngModel)]="contactData.name" name="name" type="text" placeholder="What's your name?" required autocomplete="off">
+                    @if (!name.valid && contactForm.submitted) {
+                        <span class="validation-ctn">Please tell me who you are</span>
+                    }
                 </div>
                 <div class="inputs">
                     <label for="email">Your Email</label>
-                    <input type="email" placeholder="What's your email">
+                    <input #email="ngModel" [(ngModel)]="contactData.email" name="email"  type="email" placeholder="What's your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"autocomplete="off">
+                    @if (!email.valid && contactForm.submitted) {
+                        <span class="validation-ctn">Please enter a valid Email adress</span>
+                    }
                 </div>
                 <div class="inputs">
                     <label for="name">Your Message</label>
-                    <input type="text" placeholder="What's your message?">
+                    <textarea #message="ngModel" class="invisible-scrollbar" [(ngModel)]="contactData.message" name="message" type="text" placeholder="What's your message?" required></textarea> 
+                    @if (!message.valid && contactForm.submitted) {
+                        <span class="validation-ctn">Your message is missing, please fill it out!</span>
+                    }
                 </div>
             </section>
-            <button>SEND <img src="" alt=""></button>
+            <button>SEND <img src="assets/icons/email-send-white.png" alt=""></button>
         </form>
     </section>
 </main>

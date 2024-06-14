@@ -24,6 +24,7 @@
 
             >section {
                 width: 100%;
+
                 >div {
                     >span {
                         font-size: 24px;
@@ -31,6 +32,12 @@
 
                     >h3 {
                         font-size: 90px;
+                    }
+
+                    .validation-ctn{
+                        font-size: 14px;
+                        color: red;
+                        margin-top: -16px
                     }
                 }
             }
@@ -48,8 +55,7 @@
         outline: none;
         color: white;
 
-        > {
-            input {
+        > input, textarea {
                 @include f.flex(center);
                 width: 100%;
                 padding: 16px 24px;
@@ -58,8 +64,16 @@
                 background-color: #1F1F1F;
                 outline: none;
                 color: white;
-            }
         }
+        >textarea {
+            resize: none;
+            overflow: auto;
+            min-height: 150px
+        }
+    }
+
+    .invisible-scrollbar::-webkit-scrollbar{
+        display: none
     }
 
 
@@ -75,7 +89,12 @@
         width: 130px;
         height: 50px;
 
-        &:hover{
+        >img {
+            width: 26px;
+            margin: 4px 0 0 8px;
+        }
+
+        &:hover {
             cursor: pointer;
             transition: all .225s ease-in-out;
             background-color: grey;
