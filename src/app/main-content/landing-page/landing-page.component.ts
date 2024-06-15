@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from './navbar/navbar.component';
 import { NgxTypedWriterModule } from 'ngx-typed-writer';
 
 @Component({

@@ -25,6 +25,7 @@ export class ProjectComponent {
     liveDemoLink: '',
     githubLink: '',
     usedTechnologies: 'JavaScript, HTML, CSS',
+    projectDescription: '',
   };
 
 }
