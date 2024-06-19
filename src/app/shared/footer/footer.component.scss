@@ -1,11 +1,19 @@
 @use '../../../styles.scss' as f;
 
+.footer{
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
 
 .footer {
     display: flex;
     justify-content: start;
     align-items: start;
     flex-direction: column;
+    color: white;
+
 
     >hr {
         align-self: center;
@@ -37,7 +45,10 @@
     >div {
         @include f.flex(space-evenly);
         width: 250px;
-        color: white;
+
+        >a{
+            color: white;
+        }
 
         >a:hover {
             transform: scale(1.15);

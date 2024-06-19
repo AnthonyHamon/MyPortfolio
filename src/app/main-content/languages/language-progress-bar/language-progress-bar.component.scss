@@ -18,5 +18,12 @@ section {
         border-radius: 5px;
     }
 
+    .mdc-linear-progress__bar-inner{
+        border-radius: 24px;
+    }
 
 }
+
+::ng-deep .mdc-linear-progress__bar-inner {
+    border-radius: 10px; /* Adjust the value to your desired radius */
+  }

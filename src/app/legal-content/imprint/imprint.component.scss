@@ -1,0 +1,16 @@
+@use '../../../styles.scss' as f;
+
+.imprint {
+    height: calc(100vh - 150px);
+
+    @include f.flex(center, start);
+    flex-direction: column;
+    gap: 48px;
+    margin-left: 48px;
+
+    color: white;
+
+    a {
+        color: white;
+    }
+}
