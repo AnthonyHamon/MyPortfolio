@@ -23,7 +23,14 @@
      color: white;
  }
 
+
+ main{
+    @include flex(center, start);
+    background-color: black;
+ }
+
  .above-the-fold {
+    position: relative;
      background-image: url(../../../assets/img/above-the-fold-bg.jpg);
      background-position: bottom right;
      background-size: auto;
@@ -31,6 +38,8 @@
      background-color: black;
      height: 100vh;
      width: 100%;
+     max-width: 1920px;
+     max-height: 1080px;
      
 
      >img {
@@ -38,7 +47,7 @@
          height: auto;
          position: absolute;
          bottom: 0;
-         right: 10%
+         right: 0;
      }
  }
 

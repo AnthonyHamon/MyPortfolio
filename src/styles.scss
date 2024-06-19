@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 
+$maxWidth: 1920px;
+$maxHeight: 1080px;
+
 @mixin flex($j_content, $a_item: center) {
     display: flex;
     justify-content: $j_content;

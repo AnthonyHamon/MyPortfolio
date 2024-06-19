@@ -1,24 +1,25 @@
 @use '../../../../styles.scss' as *;
 @use '../../../app.component.scss' as shadow;
 
-.social-links-ctn{
+.social-links-ctn {
     @include flex(start);
-        background-color: rgb(244, 244, 246);
-        @include shadow.top-shadow();
+    background-color: rgb(244, 244, 246);
+    @include shadow.top-shadow();
 
-        width: 100%;
-        gap: 42px;
-        position: absolute;
+    width: 100%;
+    gap: 42px;
+    position: absolute;
+    max-width: $maxWidth;
 
     >hr {
         border-color: black;
         border-width: 2px;
         border-style: solid;
         width: 80px;
-        border-top-right-radius: 2px; 
-        border-bottom-right-radius: 2px; 
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
     }
-    
+
     .social-links {
         @include flex(start);
         padding: 12px;
@@ -28,7 +29,7 @@
             @include flex(start);
             color: black;
 
-            >img:hover{
+            >img:hover {
                 transition: all .225s ease-in-out;
                 transform: scale(1.15);
             }
