@@ -1,28 +1,35 @@
-*{
+@use '../../../styles.scss' as f;
+
+* {
     color: black;
 }
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 18px 3px 18px;
-    position: fixed;
-    width: 100%;
-    // background-color: rgba(255, 255, 255, 0.99);
-    background-color: rgba(244, 244, 246, 0.95);
-    z-index: 2;
-    // box-shadow: 0px 5px 5px 10px white;
-    box-shadow: 0px 5px 10px 10px rgba(244, 244, 246, 0.95);
-    
-    >a{
-        >img{
-            width: 250px;
-            height: auto;
-            cursor: pointer;
-            margin-left: 65px;
+
+header {
+
+    @include f.flex(center, start);
+
+    .header {
+        @include f.flex(space-between);
+        padding: 18px 18px 3px 18px;
+        position: fixed;
+        width: 100%;
+        // background-color: rgba(255, 255, 255, 0.99);
+        background-color: rgba(244, 244, 246, 0.95);
+        z-index: 2;
+        // box-shadow: 0px 5px 5px 10px white;
+        box-shadow: 0px 5px 10px 10px rgba(244, 244, 246, 0.95);
+        max-width: f.$maxWidth;
+
+        >a {
+            >img {
+                width: 250px;
+                height: auto;
+                cursor: pointer;
+                margin-left: 65px;
+            }
         }
+
     }
-  
 }
 
 .navbar {
@@ -34,7 +41,7 @@
     >a {
         font-size: 28px;
 
-        &:hover{
+        &:hover {
             // filter: brightness(0.5);
             color: gray;
         }
@@ -49,13 +56,20 @@
             height: 3px;
             width: 0;
             margin: auto;
-            transition: all .350s ease-in-out;  
+            transition: all .350s ease-in-out;
         }
 
-        
-        &:hover::after{
+
+        &:hover::after {
             width: 70%;
             border: 1px solid black;
         }
+    }
+}
+
+
+@media screen and (min-width: 1921px) {
+    .navbar{
+        min-width: 50%;
     } 
 }

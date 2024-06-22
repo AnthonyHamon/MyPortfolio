@@ -10,6 +10,7 @@
         @include f.flex(start);
         width: 80%;
         padding: 54px 0;
+        max-width: f.$maxWidth;
 
         >form {
             @include f.flex(start, start);
@@ -100,5 +101,39 @@
             background-color: grey;
         }
     }
+}
 
+.privacy-policy-check-ctn{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+
+    >div{
+        display: flex;
+        gap: 16px;
+
+        input:checked{
+            background: black;
+            color: black;
+        }
+
+        >p{
+            font-size: 14px;
+    
+            >a{
+                color: red;
+            }
+        }
+    }
+
+    
+
+    
+
+    >span{
+        color: red;
+    }
+
+    
 }

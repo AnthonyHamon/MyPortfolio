@@ -24,14 +24,16 @@
  }
 
 
- main{
-    @include flex(center, start);
-    background-color: black;
+ main {
+     @include flex(center, start);
+     background-color: black;
  }
 
  .above-the-fold {
-    position: relative;
-     background-image: url(../../../assets/img/above-the-fold-bg.jpg);
+     @include flex(center, end);
+     position: relative;
+    //  background-image: url(../../../assets/img/above-the-fold-bg.jpg);
+     background-image: url(../../../assets/img/bg-landpage.jpg);
      background-position: bottom right;
      background-size: auto;
      background-repeat: no-repeat;
@@ -40,14 +42,12 @@
      width: 100%;
      max-width: 1920px;
      max-height: 1080px;
-     
+
+
 
      >img {
-         width: 700px;
+         width: 600px; 
          height: auto;
-         position: absolute;
-         bottom: 0;
-         right: 0;
      }
  }
 
@@ -66,8 +66,8 @@
          justify-content: center;
          align-items: center;
          gap: 12px;
-        //  padding: 32px;
-        //  background-image: url('./../../../assets/icons/A-logo-only.png');
+         //  padding: 32px;
+         //  background-image: url('./../../../assets/icons/A-logo-only.png');
 
          >h1 {
              font-size: 36px;
@@ -93,5 +93,67 @@
          }
 
      }
-
  }
+
+
+ @media screen and (max-width: 1000px) {
+     .above-the-fold {
+         flex-direction: column-reverse;
+         align-items: center;
+
+         >img {
+             width: auto;
+             height: 600px;
+             margin-top: 100px;
+         }
+     }
+
+     .hello-world-ctn {
+         height: unset;
+
+         .hello-world {
+
+             gap: 0;
+
+             >h1 {
+                 display: none;
+             }
+
+             >div {
+                 width: max-content;
+             }
+
+             >a {
+                 margin-top: 8px;
+             }
+         }
+     }
+ }
+
+
+ @media screen and (max-width: 475px) {
+    .above-the-fold {
+        >img{
+            height: 500px;
+        }
+
+        #personal-name{
+            display: block;
+            width: max-content;
+        }
+    }
+
+    .hello-world-ctn{
+        .hello-world{
+            >div{
+                width: unset;
+
+                >p{
+                    >br{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

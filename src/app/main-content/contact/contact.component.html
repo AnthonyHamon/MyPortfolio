@@ -28,6 +28,15 @@
                         <span class="validation-ctn">Your message is missing, please fill it out!</span>
                     }
                 </div>
+                <div class="privacy-policy-check-ctn">
+                    <div>
+                        <input #checkBox="ngModel" [(ngModel)]="contactData.checked" type="checkbox" name="checkBox" required>
+                        <p>I've read the <a href="privacy-policy" target="_blank">privacy policy</a> and agree to the processing of my data as outlined <p>
+                    </div>
+                    @if(!checkBox.valid && contactForm.submitted){
+                        <span class="validation-ctn">Please accept the privacy police to send your message</span>
+                    }
+                </div>
             </section>
             <button>SEND <img src="assets/icons/email-send-white.png" alt=""></button>
         </form>

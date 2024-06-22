@@ -1,36 +1,38 @@
 @use '../../../styles.scss' as f;
 
-.footer{
-    position: absolute;
-    right: 0;
-    left: 0;
-}
 
 
-.footer {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    color: white;
 
+footer {
+    @include f.flex(center, start);
 
-    >hr {
-        align-self: center;
-        width: 80%;
-    }
-
-
-    >section {
-        @include f.flex(space-between);
+    .footer {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        color: white;
         width: 100%;
-        padding: 36px 0;
+        max-width: f.$maxWidth; 
 
-        >a {
-            >img {
-                width: 250px;
-                height: 65px;
-                object-fit: contain;
+
+        >hr {
+            align-self: center;
+            width: 80%;
+        }
+
+
+        >section {
+            @include f.flex(space-between);
+            width: 100%;
+            padding: 36px 0;
+
+            >a {
+                >img {
+                    width: 250px;
+                    height: 65px;
+                    object-fit: contain;
+                }
             }
         }
     }
@@ -46,7 +48,7 @@
         @include f.flex(space-evenly);
         width: 250px;
 
-        >a{
+        >a {
             color: white;
         }
 

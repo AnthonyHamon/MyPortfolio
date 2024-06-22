@@ -1,6 +1,10 @@
 @use '../../../../styles.scss' as *;
 @use '../../../app.component.scss' as shadow;
 
+main {
+    @include flex(center, start)
+}
+
 .social-links-ctn {
     @include flex(start);
     background-color: rgb(244, 244, 246);

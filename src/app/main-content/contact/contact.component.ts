@@ -17,6 +17,7 @@ export class ContactComponent {
     name: '', 
     email: '',
     message: '', 
+    checked: false,
   }
 
 
