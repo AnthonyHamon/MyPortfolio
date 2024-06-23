@@ -27,3 +27,9 @@ section {
 ::ng-deep .mdc-linear-progress__bar-inner {
     border-radius: 10px; /* Adjust the value to your desired radius */
   }
+
+  @media screen and (max-width:680px) {
+    section{
+        gap: 24px;
+    }
+  }

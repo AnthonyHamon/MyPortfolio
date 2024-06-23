@@ -5,7 +5,7 @@
 // :host {
 //     width: 70%;
 //     @include f.flex(start);
-    
+
 // }
 
 // .project-card {
@@ -119,7 +119,7 @@ $main-width: 100%;
 :host {
     width: 90%;
     @include f.flex(start);
-    
+
 }
 
 .project-card {
@@ -146,7 +146,7 @@ $main-width: 100%;
     @include f.flex(center, start);
     flex-direction: column;
     gap: 18px;
-    color: #f4f4f6; 
+    color: #f4f4f6;
 
 
     >div {
@@ -196,22 +196,129 @@ $main-width: 100%;
 }
 
 
-.reverse-card{
+.reverse-card {
     flex-direction: row-reverse;
 }
 
-.reverse-project-description{
+.reverse-project-description {
     @include f.flex(center, end);
     right: 35%;
-    margin-left: 108px;
-    margin-right: 54px;
-    left: 0;
 
-    >div{
+    >div {
         @include f.flex(end, end);
 
-        >p{
+        >p {
+            text-align: end;
             padding-right: 0;
+        }
+    }
+}
+
+
+@media screen and (max-width:1440px) {
+
+    .project-description{
+            .links{
+                flex-direction: row;
+                align-items: center;
+            }
+    }
+    
+}
+
+@media screen and (max-width:1280px) {
+    .project-card {
+        >img {
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+    .reverse-project-description {
+        margin-left: unset;
+        margin-right: unset;
+
+        >div {
+
+            padding-left: 54px;
+            >span {
+                text-align: end;
+            }
+
+            >p {
+                text-align: end;
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width:1150px) {
+    :host{
+        justify-content: center;
+    }
+
+    .project-card{
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        height: 90%;
+
+        >img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .project-description, .reverse-project-description{
+        padding: 0 54px 54px;
+
+        >div{
+            padding-left: 0;
+            >p{
+                padding-right: 0;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width:680px) {
+    .project-card{
+        width: 100%;
+        height: 100%;
+        gap: 24px;
+    }
+
+    .project-description, .reverse-project-description{
+        padding: 0 24px 24px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .project-description{
+        >div{
+            >h3{
+                font-size: 28px;
+            }
+
+            >span{
+                font-size: 20px;
+            }
+
+            >p{
+                font-size: 14px;
+            }
+
+            a{
+                font-size: 14px;
+            }
+        }
+
+        #liveTestLink{
+            padding: 8px;
         }
     }
 }

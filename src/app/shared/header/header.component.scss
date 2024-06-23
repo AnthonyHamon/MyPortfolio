@@ -38,7 +38,7 @@ header {
     min-width: 50vw;
     gap: 32px;
 
-    >a {
+    a {
         font-size: 28px;
 
         &:hover {
@@ -69,7 +69,73 @@ header {
 
 
 @media screen and (min-width: 1921px) {
-    .navbar{
+    .navbar {
         min-width: 50%;
-    } 
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header {
+        .header {
+            >a {
+                >img {
+                    margin-left: unset;
+                }
+            }
+        }
+    }
+
+
+
+    .navbar {
+        gap: 18px;
+
+        a {
+            font-size: 22px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+    .navbar {
+        min-width: unset;
+
+        >a {
+            display: none;
+        }
+    }
+
+
+    header {
+        .header {
+            >a {
+                >img {
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    header {
+        .header {
+            >a {
+                >img {
+                    width: 150px;
+                }
+            }
+        }
+    }
+
+    .navbar {
+        gap: 18px;
+
+        a {
+            font-size: 18px;
+        }
+    }
+    
 }

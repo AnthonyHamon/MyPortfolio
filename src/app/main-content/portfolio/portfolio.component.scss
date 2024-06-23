@@ -49,12 +49,12 @@
 
 @use '../../../styles.scss' as f;
 
-:host{
+:host {
     position: relative;
     @include f.flex(center);
 }
 
-.portfolio{
+.portfolio {
     @include f.flex(center);
     flex-direction: column;
     width: 80%;
@@ -70,29 +70,62 @@
 
 
 
-    >h2{
+    >h2 {
         width: 80%;
         font-size: 90px;
         color: black;
         padding-bottom: 54px;
     }
 
-    ::before{
-    content: "";
-    background-color: #1F1f1F;
-    background-color: #1C1C1C;
-    position: absolute;
-    height: 170%;
-    width: 170%;
-    top: 0;
-    bottom: 0;
-    right: -100%;
-    z-index: 0;
-    transform: rotate(45deg);
+    ::before {
+        content: "";
+        background-color: #1F1f1F;
+        background-color: #1C1C1C;
+        position: absolute;
+        height: 170%;
+        width: 170%;
+        top: 0;
+        bottom: 0;
+        right: -100%;
+        z-index: 0;
+        transform: rotate(45deg);
     }
 
 }
 
-.reverse-card{
+.reverse-card {
     justify-content: end !important;
+}
+
+
+@media screen and (max-width:1150px) {
+    .reverse-card {
+        flex-direction: column;
+        justify-content: center;
+
+        >img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+
+.portfolio {
+
+    ::before{
+        transform: rotate(33deg);
+        height: 140%;
+        width: 200%;
+    }
+}
+
+}
+
+@media screen and (max-width:680px) {
+.portfolio{
+    >h2{
+        font-size: 45px;
+        padding-bottom: 24px;
+    }
+}
 }

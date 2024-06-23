@@ -32,7 +32,7 @@
  .above-the-fold {
      @include flex(center, end);
      position: relative;
-    //  background-image: url(../../../assets/img/above-the-fold-bg.jpg);
+     //  background-image: url(../../../assets/img/above-the-fold-bg.jpg);
      background-image: url(../../../assets/img/bg-landpage.jpg);
      background-position: bottom right;
      background-size: auto;
@@ -46,7 +46,7 @@
 
 
      >img {
-         width: 600px; 
+         width: 600px;
          height: auto;
      }
  }
@@ -132,28 +132,36 @@
 
 
  @media screen and (max-width: 475px) {
-    .above-the-fold {
-        >img{
-            height: 500px;
-        }
+     .above-the-fold {
+         >img {
+             height: 500px;
+         }
 
-        #personal-name{
-            display: block;
-            width: max-content;
-        }
-    }
+         #personal-name {
+             display: block;
+             width: max-content;
+         }
+     }
 
-    .hello-world-ctn{
-        .hello-world{
-            >div{
-                width: unset;
+     .hello-world-ctn {
+         .hello-world {
+             >div {
+                 width: unset;
 
-                >p{
-                    >br{
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-}
+                 >p {
+                     >br {
+                         display: none;
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+ @media screen and (max-width: 475px) {
+     .above-the-fold {
+         >img {
+             height: 450px;
+         }
+     }
+ }

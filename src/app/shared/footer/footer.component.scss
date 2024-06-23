@@ -58,3 +58,13 @@ footer {
         }
     }
 }
+
+
+@media screen and (max-width: 560px) {
+    .footer{
+        >section{
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+}

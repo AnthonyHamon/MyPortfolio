@@ -1,40 +1,47 @@
 @use '../../../styles.scss' as *;
 
-:host{
+:host {
     display: block;
     height: 100vh;
 }
 
-.about-me-section{
+.about-me-section {
     background-color: rgb(244, 244, 246);
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-section{
+section {
 
     @include flex(center, center);
     height: 100%;
     gap: 48px;
+    max-width: 1920px;
 
-    >img{
-        width:  450px;
+    >img {
+        width: 450px;
         height: 450px;
         object-fit: cover;
         border-radius: 50%;
         border: 4px solid black;
         box-shadow: 0 0 10px 0;
     }
-    .about-me{
+
+    .about-me {
         @include flex(start, start);
         flex-direction: column;
-        width: 35vw;
+        width: 50%;
         margin-left: 48px;
-           
-        >h2{
+
+        >h2 {
             font-size: 90px;
         }
-        >div{
+
+        >div {
             @include flex(start, center);
             flex-direction: column;
             gap: 35px;
@@ -42,22 +49,95 @@ section{
     }
 }
 
-.more-about-me{
-     @include flex(start);
-     flex-direction: column;
-     gap: 35px;
-     >div{
+.more-about-me {
+    @include flex(start, start);
+    flex-direction: column;
+    gap: 35px;
+
+    >div {
         @include flex(start);
         gap: 24px;
-        >img{
+
+        >img {
             height: 50px;
             width: auto;
         }
-     }
+    }
 }
 
-.about-me-icon-ctn{
+.about-me-icon-ctn {
     @include flex(center);
     min-width: 100px;
 }
 
+@media screen and (max-width: 1200px) {
+    section {
+
+        >img {
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .about-me-section {
+        height: 100%;
+    }
+
+    section {
+
+        >img {
+            display: none;
+        }
+
+        .about-me{
+            width: 80%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 680px) {
+    section{
+        .about-me {
+            >h2{
+                font-size: 45px;
+            }
+        }
+    }
+       .about-me-icon-ctn{
+        min-width: unset;
+        >img{
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+       }
+}
+
+@media screen and (max-width: 600px) {
+    .about-me-section {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 362px) {
+    .about-me {
+        div{
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+
+    .about-me-icon-ctn{
+        >img{
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+       }
+}

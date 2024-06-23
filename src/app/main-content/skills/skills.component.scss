@@ -8,9 +8,8 @@
 
 .skills-ctn {
     @include shadow.top-shadow(#141414);
-    height: 50vh;
+    min-height: 50vh;
     @include f.flex(center);
-    flex-direction: column;
     width: 100%;
     background-color: #141414;
 
@@ -36,6 +35,8 @@
 
     >h2 {
         font-size: 90px;
+        text-align: center;
+        width: max-content;
     }
 
     >span {
@@ -47,6 +48,61 @@
     }
 }
 
-.languages{
+.languages {
     @include f.flex(start, start);
+}
+
+@media screen and (max-width:1300px) {
+    .skill-list {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .skills-ctn {
+        >section {
+            flex-direction: column-reverse;
+            gap: 48px;
+        }
+    }
+
+    .my-skills {
+        gap: 24px;
+        max-width: unset;
+        padding-left: unset;
+        padding-top: 24px;
+
+        >span {
+            max-width: 350px;
+            width: max-content;
+        }
+
+    }
+
+    #contact-button {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:680px) {
+
+    .my-skills {
+
+        >h2 {
+            font-size: 45px;
+        }
+
+    }
+    .skill-list {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .my-skills {
+        >span {
+            max-width: 300px;
+        }
+    }
 }

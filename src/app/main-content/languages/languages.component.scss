@@ -1,29 +1,51 @@
 @use '../../../styles.scss' as f;
 
-main{
+main {
     @include f.flex(center, start);
     height: 50vh;
     width: 100%;
     color: white;
-    
-    
+    margin-top: 24px;
 
-    >section{
+
+    >section {
         @include f.flex(start, stretch);
         flex-direction: column;
         gap: 24px;
         padding: 0 54px;
-        width: 70%;
+        width: max-content;
         max-width: f.$maxWidth;
 
-        >h2{
+        >h2 {
             font-size: 90px;
         }
 
-        >div{
+        >div {
             @include f.flex(center, stretch);
             flex-direction: column;
             gap: 24px;
         }
     }
+}
+
+
+@media screen and (max-width:680px) {
+    main {
+        margin-top: 54px;
+
+        >section {
+            >h2 {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:680px) {
+    main{
+        >section{
+            padding: 0 20px;
+        }
+    }
+
 }

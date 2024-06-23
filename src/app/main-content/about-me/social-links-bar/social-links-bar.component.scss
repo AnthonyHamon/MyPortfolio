@@ -40,3 +40,16 @@ main {
         }
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    #email-adress{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .social-links-ctn{
+        gap: 24px;
+    }
+}

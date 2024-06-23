@@ -19,3 +19,17 @@
          }
     }
 }
+
+
+@media screen and (max-width:680px) {
+
+    .technology-link{
+        >a{
+            >img{
+                width: 45px;
+                height: 45px;
+                object-fit: contain;
+            }
+        }
+    }
+}
