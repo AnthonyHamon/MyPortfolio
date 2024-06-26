@@ -35,7 +35,7 @@
                         font-size: 90px;
                     }
 
-                    .validation-ctn{
+                    .validation-ctn {
                         font-size: 14px;
                         color: red;
                         margin-top: -16px
@@ -56,16 +56,18 @@
         outline: none;
         color: white;
 
-        > input, textarea {
-                @include f.flex(center);
-                width: 100%;
-                padding: 16px 24px;
-                border-radius: 8px;
-                border-style: none;
-                background-color: #1F1F1F;
-                outline: none;
-                color: white;
+        >input,
+        textarea {
+            @include f.flex(center);
+            width: 100%;
+            padding: 16px 24px;
+            border-radius: 8px;
+            border-style: none;
+            background-color: #1F1F1F;
+            outline: none;
+            color: white;
         }
+
         >textarea {
             resize: none;
             overflow: auto;
@@ -73,7 +75,7 @@
         }
     }
 
-    .invisible-scrollbar::-webkit-scrollbar{
+    .invisible-scrollbar::-webkit-scrollbar {
         display: none
     }
 
@@ -95,59 +97,65 @@
             margin: 4px 0 0 8px;
         }
 
-        &:hover {
+        &:hover ,:enabled {
             cursor: pointer;
             transition: all .225s ease-in-out;
             background-color: grey;
         }
+
+        &:disabled{
+            cursor: not-allowed;
+            background-color: #141414;
+        }
     }
 }
 
-.privacy-policy-check-ctn{
+.privacy-policy-check-ctn {
     display: flex;
     flex-direction: column;
     padding: 16px;
     gap: 16px;
 
-    >div{
+    >div {
         display: flex;
         gap: 16px;
 
-        input:checked{
-            background: black;
-            color: black;
+        input {
+            cursor: pointer;
         }
 
-        >p{
+        >p {
             font-size: 14px;
-    
-            >a{
+
+            >a {
                 color: red;
             }
         }
     }
 
-    
 
-    
 
-    >span{
+
+
+    >span {
         color: red;
     }
 }
 
 
 @media screen and (max-width: 680px) {
-    .contact{
-        >section{
-            >form{
+    .contact {
+        >section {
+            >form {
                 padding: 24px;
-                >section{
-                    >div{
-                        >h3{
+
+                >section {
+                    >div {
+                        >h3 {
                             font-size: 45px;
                         }
-                        >span{
+
+                        >span {
                             font-size: 20px;
                         }
                     }
@@ -159,16 +167,18 @@
 
 
 @media screen and (max-width: 380px) {
-    .contact{
-        >section{
-            >form{
+    .contact {
+        >section {
+            >form {
                 padding: 8px;
-                >section{
-                    >div{
-                        >h3{
+
+                >section {
+                    >div {
+                        >h3 {
                             font-size: 36px;
                         }
-                        >span{
+
+                        >span {
                             font-size: 18px;
                         }
                     }

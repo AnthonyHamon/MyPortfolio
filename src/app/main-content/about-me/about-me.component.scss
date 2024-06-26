@@ -1,4 +1,4 @@
-@use '../../../styles.scss' as *;
+@use '../../../styles.scss' as f;
 
 :host {
     display: block;
@@ -17,7 +17,7 @@
 
 section {
 
-    @include flex(center, center);
+    @include f.flex(center, center);
     height: 100%;
     gap: 48px;
     max-width: 1920px;
@@ -32,7 +32,7 @@ section {
     }
 
     .about-me {
-        @include flex(start, start);
+        @include f.flex(start, start);
         flex-direction: column;
         width: 50%;
         margin-left: 48px;
@@ -42,7 +42,7 @@ section {
         }
 
         >div {
-            @include flex(start, center);
+            @include f.flex(start, center);
             flex-direction: column;
             gap: 35px;
         }
@@ -50,12 +50,12 @@ section {
 }
 
 .more-about-me {
-    @include flex(start, start);
+    @include f.flex(start, start);
     flex-direction: column;
     gap: 35px;
 
     >div {
-        @include flex(start);
+        @include f.flex(start);
         gap: 24px;
 
         >img {
@@ -66,7 +66,7 @@ section {
 }
 
 .about-me-icon-ctn {
-    @include flex(center);
+    @include f.flex(center);
     min-width: 100px;
 }
 

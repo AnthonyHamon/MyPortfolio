@@ -1,13 +1,8 @@
 @use '../../../styles.scss' as f;
-@use '../landing-page/landing-page.component.scss' as btn;
-@use '../../app.component.scss' as shadow;
-
-* {
-    color: white;
-}
+@use '../../app.component.scss' as app;
 
 .skills-ctn {
-    @include shadow.top-shadow(#141414);
+    @include app.top-shadow(#141414);
     min-height: 50vh;
     @include f.flex(center);
     width: 100%;
@@ -31,6 +26,7 @@
     flex-direction: column;
     max-width: 30vw;
     padding-left: 54px;
+    color: white;
     ;
 
     >h2 {
@@ -44,7 +40,7 @@
     }
 
     >a {
-        @include btn.getInTouchBtn();
+        @include app.getInTouchBtn();
     }
 }
 

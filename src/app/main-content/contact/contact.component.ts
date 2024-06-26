@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { MessageSentPopupComponent } from '../message-sent-popup/message-sent-popup.component';
+import { HtmlTagDefinition } from '@angular/compiler';
 
 @Component({
   selector: 'app-contact',
@@ -22,7 +24,7 @@ export class ContactComponent {
 
 
 
-  mailTest = false;
+  mailTest = true;
 
   post = {
     endPoint: 'https://anthony-hamon.com/sendMail.php',
@@ -48,7 +50,21 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    }
+    }else if (ngForm.submitted && this.mailTest) {
+
+      ngForm.resetForm();
+      
+    } 
+  }
+
+
+  enableButton(){
+  //   if(this.contactData.checked){
+  //     sendButton.setAttribute('enabled', '')
+  //   }else {
+  //     sendButton.setAttribute('disabled', '')
+  //   }
+  
   }
 
 }
