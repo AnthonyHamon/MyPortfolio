@@ -1,13 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { MessageSentPopupComponent } from '../message-sent-popup/message-sent-popup.component';
-import { HtmlTagDefinition } from '@angular/compiler';
+import { UserFeedbackComponent } from '../user-feedback/user-feedback.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, UserFeedbackComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -15,16 +14,21 @@ export class ContactComponent {
 
   http = inject(HttpClient);
 
+  userFeedbackPopup = false;
+  userFeedback = false;
+
+  checked= false;
+
+
   contactData = {
-    name: '', 
+    name: '',
     email: '',
-    message: '', 
-    checked: false,
+    message: '',
   }
 
 
 
-  mailTest = true;
+  mailTest = true; 
 
   post = {
     endPoint: 'https://anthony-hamon.com/sendMail.php',
@@ -38,33 +42,38 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    console.log(ngForm)
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log(response);
-            ngForm.resetForm();
+            console.log('response is', response);
+            this.userFeedback = true;
+            this.showUserFeedbackPopup(ngForm);
           },
           error: (error) => {
             console.error(error);
+            this.showUserFeedbackPopup(ngForm);
           },
           complete: () => console.info('send post complete'),
         });
-    }else if (ngForm.submitted && this.mailTest) {
+    }
+    //  else if (ngForm.submitted && this.mailTest) {
+    //   this.userFeedback = true;
+    //   this.showUserFeedbackPopup(ngForm);
 
-      ngForm.resetForm();
-      
-    } 
+    // }
   }
 
 
-  enableButton(){
-  //   if(this.contactData.checked){
-  //     sendButton.setAttribute('enabled', '')
-  //   }else {
-  //     sendButton.setAttribute('disabled', '')
-  //   }
-  
+  showUserFeedbackPopup(ngForm: NgForm) {
+    this.userFeedbackPopup = true;
+    setTimeout(() => {
+      this.userFeedbackPopup = false;
+      ngForm.resetForm();
+    }, 2000);
   }
 
 }
+
+

@@ -30,7 +30,7 @@
                 </div>
                 <div class="privacy-policy-check-ctn">
                     <div>
-                        <input (click)="enableButton()" #checkBox="ngModel" [(ngModel)]="contactData.checked" type="checkbox" name="checkBox" required>
+                        <input #checkBox="ngModel" [(ngModel)]="checked" type="checkbox" name="checkBox" required>
                         <p>I've read the <a href="privacy-policy" target="_blank">privacy policy</a> and agree to the processing of my data as outlined<p>
                     </div>
                     @if(!checkBox.valid && contactForm.submitted){
@@ -38,11 +38,14 @@
                     }
                 </div>
             </section>
-            @if (contactData.checked) {
-                <button type="button" enabled>SEND <img src="assets/icons/email-send-white.png" alt=""></button>
-            }@else {
-                <button type="button" disabled>SEND <img src="assets/icons/email-send-white.png" alt=""></button>
-            }
+                <button [disabled]="!checked" type="submit">SEND <img src="assets/icons/email-send-white.png" alt=""></button>
         </form>
     </section>
+
+    <!-- @if (contactForm.submitted && formSent) {
+        <app-message-sent-popup></app-message-sent-popup>
+    } -->
+    @if (contactForm.submitted && mailTest) {
+        <app-user-feedback [userFeedbackPopup]="userFeedbackPopup" [userFeedback]="userFeedback"></app-user-feedback>
+    }
 </main>

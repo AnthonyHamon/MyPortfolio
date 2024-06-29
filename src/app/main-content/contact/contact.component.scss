@@ -5,6 +5,7 @@
 .contact {
     @include shadow.top-shadow(#141414);
     @include f.flex(center);
+    position: relative;
 
     >section {
         @include f.flex(start);
