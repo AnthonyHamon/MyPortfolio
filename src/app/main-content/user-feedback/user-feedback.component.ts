@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { slideInRightAnimation } from 'angular-animations';
+import {slideInRightAnimation } from 'angular-animations';
 import { ContactComponent } from '../contact/contact.component';
 
 @Component({
@@ -8,37 +8,40 @@ import { ContactComponent } from '../contact/contact.component';
   imports: [ContactComponent],
   templateUrl: './user-feedback.component.html',
   styleUrl: './user-feedback.component.scss',
-  animations: [slideInRightAnimation()]
+  animations: [slideInRightAnimation({translate: '200%', duration: 2000})]
 })
-export class UserFeedbackComponent implements OnInit{
+
+export class UserFeedbackComponent implements OnInit {
+
 
   ngOnInit(): void {
     this.slideInPopup();
     this.updateMessage();
+
   }
 
- @Input() userFeedbackPopup = false;
- @Input () userFeedback = false;
+  @Input() positiveUserFeedback = false;
 
   animationState = false;
+  animationWithState = false;
 
-  messageSuccessfullySent = "you're message was sent successfully";
-  errorMessage = "you're message couldn't be sent, please try again";
+  messageSuccessfullySent = "your message was sent successfully";
+  errorMessage = "your message couldn't be sent, please try again";
 
-  slideInPopup(){
-    this.animationState = true;
+  slideInPopup() {
+    this.animationState = false;
     setTimeout(() => {
-      this.animationState = false;
-    }, 2000);
+      this.animationState = true;
+      this.animationWithState = !this.animationWithState;
+    }, 1);
   }
 
-  updateMessage(){
-    console.log(this.userFeedback);
-    if(this.userFeedback){
+  updateMessage() {
+    if (this.positiveUserFeedback) {
       return this.messageSuccessfullySent;
-    } else{
+    } else {
       return this.errorMessage
     }
   }
-  
+
 }

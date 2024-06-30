@@ -42,10 +42,7 @@
         </form>
     </section>
 
-    <!-- @if (contactForm.submitted && formSent) {
-        <app-message-sent-popup></app-message-sent-popup>
-    } -->
-    @if (contactForm.submitted && mailTest) {
-        <app-user-feedback [userFeedbackPopup]="userFeedbackPopup" [userFeedback]="userFeedback"></app-user-feedback>
+    @if (contactForm.submitted && userFeedbackPopup) {
+        <app-user-feedback [positiveUserFeedback]="positiveUserFeedback"></app-user-feedback>
     }
 </main>

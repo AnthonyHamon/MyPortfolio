@@ -8,14 +8,15 @@ import { UserFeedbackComponent } from '../user-feedback/user-feedback.component'
   standalone: true,
   imports: [FormsModule, UserFeedbackComponent],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
+  animations: [],
 })
 export class ContactComponent {
 
   http = inject(HttpClient);
 
   userFeedbackPopup = false;
-  userFeedback = false;
+  positiveUserFeedback = false;
 
   checked= false;
 
@@ -42,13 +43,12 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    console.log(ngForm)
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             console.log('response is', response);
-            this.userFeedback = true;
+            this.positiveUserFeedback = true;
             this.showUserFeedbackPopup(ngForm);
           },
           error: (error) => {
@@ -58,16 +58,16 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     }
-    //  else if (ngForm.submitted && this.mailTest) {
-    //   this.userFeedback = true;
-    //   this.showUserFeedbackPopup(ngForm);
+     else if (ngForm.submitted && this.mailTest) {
+      this.showUserFeedbackPopup(ngForm);
+      this.positiveUserFeedback = true;
 
-    // }
+    }
   }
 
 
   showUserFeedbackPopup(ngForm: NgForm) {
-    this.userFeedbackPopup = true;
+      this.userFeedbackPopup = true;
     setTimeout(() => {
       this.userFeedbackPopup = false;
       ngForm.resetForm();

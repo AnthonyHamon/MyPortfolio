@@ -12,11 +12,23 @@
     height: 100vh;
     width: 100%;
     @include f.flex(center, center);
+    overflow: hidden;
+
 
     >span{
+        text-align: center;
         padding: 36px;
         background-color: white;
         border-radius: 10px;
-        
+        transform: translateX(200%);
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .popup-ctn {
+        padding: 18px;
+        >span{
+            padding: 18px;
+        }
     }
 }
