@@ -1,7 +1,7 @@
  @use '../../../styles.scss' as f;
  @use '../../../app/app.component.scss' as app;
 
- 
+
 
  * {
      color: white;
@@ -16,7 +16,6 @@
  .above-the-fold {
      @include f.flex(center, end);
      position: relative;
-     //  background-image: url(../../../assets/img/above-the-fold-bg.jpg);
      background-image: url(../../../assets/img/bg-landpage.jpg);
      background-position: bottom right;
      background-size: auto;
@@ -25,7 +24,6 @@
      height: 100vh;
      width: 100%;
      max-width: 1920px;
-     max-height: 1080px;
 
 
 
@@ -50,8 +48,6 @@
          justify-content: center;
          align-items: center;
          gap: 12px;
-         //  padding: 32px;
-         //  background-image: url('./../../../assets/icons/A-logo-only.png');
 
          >h1 {
              font-size: 36px;
@@ -148,4 +144,75 @@
              height: 450px;
          }
      }
+ }
+
+
+ @media screen and (max-height:1000px) {
+     .above-the-fold {
+         >img{
+             margin-top: unset;
+         }
+     }
+ }
+
+
+ @media screen and (max-height:800px) {
+
+     .above-the-fold {
+         gap: 24px;
+
+         >img {
+             height: 350px !important;
+         }
+     }
+
+     .hello-world-ctn {
+         .hello-world {
+             >div {
+                 font-size: 24px;
+             }
+
+             >a {
+                 width: max-content;
+             }
+         }
+     }
+
+     #personal-name {
+         font-size: 32px;
+         width: unset !important;
+     }
+ }
+
+ @media screen and (max-height:700px) {
+
+     .above-the-fold {
+         gap: 0px;
+     }
+ }
+
+
+ @media screen and (max-height:600px) {
+
+     .above-the-fold {
+         >img {
+             height: 275px !important;
+         }
+     }
+
+     .hello-world-ctn{
+        .hello-world{
+            >div {
+                font-size: 18px;
+            }
+            >a{
+                padding: 12px;
+            }
+        }
+     }
+
+     #personal-name {
+        font-size: 24px;
+        width: unset !important;
+    }
  }

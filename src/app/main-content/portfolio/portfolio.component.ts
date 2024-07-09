@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [ProjectComponent],
+  imports: [ProjectComponent, TranslateModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
@@ -17,7 +18,7 @@ export class PortfolioComponent {
       liveDemoLink: 'https://fantasia-adventure.anthony-hamon.com/',
       githubLink: 'https://github.com/AnthonyHamon/Fantasia-Adventures',
       usedTechnologies: 'JavaScript, HTML, CSS',
-      projectDescription: 'A 2D Platform, jump and run adventure game mainly based on JavaScript and OOP. Be a Hero, collect items, beat all creatures and defeat the Boss using differents skills and save the World!',
+      projectDescription: 'fantasiaAdventureDescription',
 
     },
     {
@@ -26,7 +27,7 @@ export class PortfolioComponent {
       liveDemoLink: 'https://join.anthony-hamon.com/',
       githubLink: 'https://github.com/AnthonyHamon/Join-GruppenProjekt',
       usedTechnologies: 'Angular, TypeScript, CSS, Firebase',
-      projectDescription: 'Log in and use this task manager app inspired by the Kanban System. Create, update and deletes your tasks. Assign them to users and organize your project between categories and status',
+      projectDescription: 'joinDescription',
 
     },
     {
@@ -35,7 +36,7 @@ export class PortfolioComponent {
       liveDemoLink: 'https://pokédex.anthony-hamon.com/',
       githubLink: 'https://github.com/AnthonyHamon/Pokedex',
       usedTechnologies: 'JavaScript, HTML, CSS, API',
-      projectDescription: 'A library for all Pokémons. Obtain many Informations about the Pocket Monsters or search for a specific one. Based ond the PokéAPI',
+      projectDescription: 'pokedexDescription',
 
     },
     {
@@ -44,7 +45,7 @@ export class PortfolioComponent {
       liveDemoLink: 'https://anthony-hamon.com/',
       githubLink: 'https://github.com/AnthonyHamon/MyPortfolio',
       usedTechnologies: 'Angular, TypeScript, SCSS',
-      projectDescription: 'A simple one Page portfolio to introduce myself and share my projects to potential client / company / recruiter.',
+      projectDescription: 'portfolioDescription',
 
     },
     // {

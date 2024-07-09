@@ -3,46 +3,54 @@
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <section>
                 <div>
-                    <span>GET IN TOUCH</span>
-                    <h3>Contact</h3>
+                    <span>{{"contactComponent.getInTouch" | translate}}</span>
+                    <h3>{{"contactComponent.contact" | translate}}</h3>
                 </div>
-        
+
                 <div class="inputs">
-                    <label for="name">Your Name</label>
-                    <input #name="ngModel" minlength="3" [(ngModel)]="contactData.name" name="name" type="text" placeholder="What's your name?" required autocomplete="off">
+                    <label for="name">{{"contactComponent.yourName" | translate}}</label>
+                    <input #name="ngModel" minlength="3" [(ngModel)]="contactData.name" name="name" type="text"
+                        [placeholder]="namePlaceholder | translate" required autocomplete="off">
                     @if (!name.valid && contactForm.submitted) {
-                        <span class="validation-ctn">Please tell me who you are</span>
+                    <span class="validation-ctn">{{"contactComponent.nameValidation" | translate}}</span>
                     }
                 </div>
                 <div class="inputs">
-                    <label for="email">Your Email</label>
-                    <input #email="ngModel" [(ngModel)]="contactData.email" name="email"  type="email" placeholder="What's your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"autocomplete="off">
+                    <label for="email">{{"contactComponent.yourEmail" | translate}}</label>
+                    <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email"
+                        [placeholder]="emailPlaceholder | translate" required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" autocomplete="off">
                     @if (!email.valid && contactForm.submitted) {
-                        <span class="validation-ctn">Please enter a valid Email adress</span>
+                    <span class="validation-ctn">{{"contactComponent.emailValidation" | translate}}</span>
                     }
                 </div>
                 <div class="inputs">
-                    <label for="name">Your Message</label>
-                    <textarea #message="ngModel" class="invisible-scrollbar" [(ngModel)]="contactData.message" name="message" type="text" placeholder="What's your message?" required></textarea> 
+                    <label for="name">{{"contactComponent.yourMessage" | translate}}</label>
+                    <textarea #message="ngModel" class="invisible-scrollbar" [(ngModel)]="contactData.message"
+                        name="message" type="text" [placeholder]="messagePlaceholder | translate" required></textarea>
                     @if (!message.valid && contactForm.submitted) {
-                        <span class="validation-ctn">Your message is missing, please fill it out!</span>
+                    <span class="validation-ctn">{{"contactComponent.messageValidation" | translate}}</span>
                     }
                 </div>
                 <div class="privacy-policy-check-ctn">
                     <div>
                         <input #checkBox="ngModel" [(ngModel)]="checked" type="checkbox" name="checkBox" required>
-                        <p>I've read the <a href="privacy-policy" target="_blank">privacy policy</a> and agree to the processing of my data as outlined<p>
+                        <p>{{ "contactComponent.isRead" | translate }} <a href="privacy-policy" target="_blank">{{
+                                "contactComponent.privacyPolicy" | translate }}</a> {{
+                            "contactComponent.acceptPrivacyPolicy" | translate }}
+                        <p>
                     </div>
                     @if(!checkBox.valid && contactForm.submitted){
-                        <span class="validation-ctn">Please accept the privacy police to send your message</span>
+                    <span class="validation-ctn">{{ "contactComponent.privacyValidation" | translate }}</span>
                     }
                 </div>
             </section>
-                <button [disabled]="!checked" type="submit">SEND <img src="assets/icons/email-send-white.png" alt=""></button>
+            <button [disabled]="!checked" type="submit">{{ "contactComponent.sendButton" | translate }}<img
+                    src="assets/icons/email-send-white.png" alt=""></button>
         </form>
     </section>
 
     @if (contactForm.submitted && userFeedbackPopup) {
-        <app-user-feedback [positiveUserFeedback]="positiveUserFeedback"></app-user-feedback>
+    <app-user-feedback [positiveUserFeedback]="positiveUserFeedback"></app-user-feedback>
     }
 </main>

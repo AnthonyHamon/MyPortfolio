@@ -4,18 +4,18 @@
             <div class="hello-world">
                 <h1>Hello World!</h1>
                 <div>
-                    <p>I'm <span id="personal-name">
+                    <p>{{ "landingPageComponent.I" | translate }} <span id="personal-name">
                             <ngx-typed-writer [strings]="['Anthony,']" [cursorChar]="'|'" [showCursor]="true"
                                 [backSpeed]="50" [typeSpeed]="150" [loop]="false" [startDelay]="1000">
                             </ngx-typed-writer>
                         </span><br>
-                        ambitioned developer!
+                       {{ "landingPageComponent.ambitionedDeveloper" | translate }}
                     </p>
                 </div>
-                <a href="#contact">Get in Touch!</a>
+                <a href="#contact">{{ "landingPageComponent.getInTouch" | translate }}</a>
             </div>
         </div>
     
-        <img src="./assets/img/portrait.png" alt="above-the-fold-background">
+        <img [ngClass]="currentLanguage" src="./assets/img/portrait.png" alt="above-the-fold-background">
     </div>
 </main>

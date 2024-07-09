@@ -1,0 +1,62 @@
+{
+  "headerComponent": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "landingPageComponent": {
+    "I": "I'm",
+    "ambitionedDeveloper": "ambitioned developer!",
+    "getInTouch": "Get in Touch!"
+  },
+  "aboutMeComponent": {
+    "aboutMe": "About me",
+    "description": "Hi! I'm a Front-end developer living in Jüchen, Germany. I love to bring ideas and vision to life, with precision and passion. Coding grows continuously and I'm looking forward to continue growing with it, with a Junior developer job position.",
+    "developing": "Developing is building, and I love it. Being it virtual or in real, I do my best to build everything the best possible way and I feel always proud to see a project growing and look at the final result.",
+    "interests": "I have a lot of interests! Read, take a walk, playing games (board and video games), just discuss about the world. I love activities making me thinking. I make sport and I'm always happy to be with my family. And naturally, I love coding!"
+  },
+  "skillsComponent": {
+    "mySkills": "My Skills",
+    "skillsDescription": "I have built projects with diverse front-end technologies and concepts, gaining valuable experience.",
+    "contactButton": "let's have a talk"
+  },
+  "languagesComponent": {
+    "spokenLanguages": "Spoken Languages",
+    "english": "English",
+    "german": "German",
+    "french": "French"
+  },
+  "portfolioComponent": {
+    "myWork": "My Work"
+  },
+  "projectComponent": {
+    "liveTestLink": "Live Test",
+    "fantasiaAdventureDescription": "A 2D Platform, jump and run adventure game mainly based on JavaScript and OOP. Be a Hero, collect items, beat all creatures and defeat the Boss using differents skills and save the World!",
+    "joinDescription": "Log in and use this task manager app inspired by the Kanban System. Create, update and deletes your tasks. Assign them to users and organize your project between categories and status",
+    "pokedexDescription": "A library for all Pokémons. Obtain many Informations about the Pocket Monsters or search for a specific one. Based ond the PokéAPI",
+    "portfolioDescription": "A simple one Page portfolio to introduce myself and share my projects to potential client / company / recruiter."
+  },
+  "contactComponent": {
+    "getInTouch": "GET IN TOUCH",
+    "contact": "Contact",
+    "yourName": "Your Name",
+    "namePlaceholder": "What's your name?",
+    "nameValidation": "Please tell me who you are",
+    "yourEmail": "Your Email",
+    "emailPlaceholder": "What's your email",
+    "emailValidation": "Please enter a valid Email address",
+    "yourMessage": "Your Message",
+    "messagePlaceholder": "What's your message?",
+    "messageValidation": "Your message is missing, please fill it out!",
+    "isRead": "I've read the",
+    "privacyPolicy": "privacy policy",
+    "acceptPrivacyPolicy": "and agree to the processing of my data as outlined.",
+    "privacyValidation": "Please accept the privacy policy to send your message.",
+    "sendButton": "SEND"
+  },
+  "userFeedback": {
+    "messageSent": "your message was sent successfully",
+    "messageError": "your message couldn't be sent, please try again"
+  }
+}

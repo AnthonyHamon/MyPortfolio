@@ -2,11 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { UserFeedbackComponent } from '../user-feedback/user-feedback.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, UserFeedbackComponent],
+  imports: [FormsModule, UserFeedbackComponent, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   animations: [],
@@ -26,6 +27,10 @@ export class ContactComponent {
     email: '',
     message: '',
   }
+
+  namePlaceholder = 'contactComponent.namePlaceholder';
+  emailPlaceholder = 'contactComponent.emailPlaceholder';
+  messagePlaceholder = 'contactComponent.messagePlaceholder';
 
 
 

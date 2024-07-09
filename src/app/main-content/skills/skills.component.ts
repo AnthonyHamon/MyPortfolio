@@ -1,14 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TechnologyComponent } from './technology/technology.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [TechnologyComponent],
+  imports: [TechnologyComponent, TranslateModule, CommonModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
-export class SkillsComponent {
+export class SkillsComponent implements OnInit{
+
+  currentLanguage: string;
+
+  constructor(private translate:TranslateService){
+    this.currentLanguage = translate.currentLang;
+  }
+
+  ngOnInit(): void {
+    this.translate.onLangChange.subscribe((event) =>{
+      this.currentLanguage = event.lang;
+    })
+  }
+
 
   skills = [
     {

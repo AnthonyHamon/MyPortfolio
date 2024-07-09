@@ -1,3 +1,9 @@
+@if (!isLandscape) {
 <app-header></app-header>
 <router-outlet></router-outlet>
-<app-footer class="footer"></app-footer>
+<app-footer></app-footer>
+}
+
+@if(isLandscape){
+<app-landscape-screen-overlay></app-landscape-screen-overlay>
+}

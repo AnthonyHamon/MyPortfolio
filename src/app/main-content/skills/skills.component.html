@@ -6,10 +6,9 @@
             }
         </div>
         <div class="my-skills">
-            <h2>My Skills</h2>
-            <span>I have built projects with diverse front-end technologies and concepts, gaining valuable
-                experience.</span>
-            <a id="contact-button" href="#contact">let's have a talk</a>
+            <h2 [ngClass]="currentLanguage">{{ "skillsComponent.mySkills" | translate }}</h2>
+            <span>{{ "skillsComponent.skillsDescription" | translate }}</span>
+            <a id="contact-button" href="#contact">{{ "skillsComponent.contactButton" | translate }}</a>
         </div>
     </section>
 </main>

@@ -1,0 +1,64 @@
+{
+  "headerComponent": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "landingPageComponent": {
+    "I": "Ich bin",
+    "helloWorld": "Hallo Welt!",
+    "ambitionedDeveloper": "ambitionierter Entwickler!",
+    "getInTouch": "Kontaktiere mich!"
+  },
+  "aboutMeComponent": {
+    "aboutMe": "Über mich",
+    "description": "Hallo! Ich bin ein Front-End-Entwickler aus Jüchen, Deutschland. Ich liebe es, Ideen und Visionen mit Präzision und Leidenschaft zum Leben zu erwecken. Programmieren wächst kontinuierlich und ich freue mich darauf, weiter mit ihm zu wachsen, mit einer Junior-Entwickler-Position.",
+    "developing": "Entwickeln bedeutet Bauen, und ich liebe es. Sei es virtuell oder real, ich gebe mein Bestes, um alles bestmöglich zu bauen, und ich bin immer stolz darauf, ein Projekt wachsen zu sehen und das Endergebnis zu betrachten.",
+    "interests": "Ich habe viele Interessen! Lesen, spazieren gehen, Spiele spielen (Brett- und Videospiele), einfach über die Welt diskutieren. Ich liebe Aktivitäten, die mich zum Nachdenken bringen. Ich treibe Sport und bin immer glücklich, mit meiner Familie zusammen zu sein. Und natürlich liebe ich das Programmieren!"
+  },
+  "skillsComponent": {
+    "mySkills": "Meine Fähigkeiten",
+    "skillsDescription": "Ich habe Projekte mit verschiedenen Front-End-Technologien und Konzepten erstellt und wertvolle Erfahrungen gesammelt.",
+    "contactButton": "Lass uns reden"
+  },
+  "languagesComponent": {
+    "spokenLanguages": "Gesprochene Sprachen",
+    "english": "Englisch",
+    "german": "Deutsch",
+    "french": "Französisch"
+  },
+  "portfolioComponent": {
+    "myWork": "Meine Arbeit"
+  },
+  "projectComponent": {
+    "liveTestLink": "Live testen",
+    "fantasiaAdventureDescription": "Ein 2D-Plattform-, Jump-and-Run-Abenteuerspiel, das hauptsächlich auf JavaScript und OOP basiert. Sei ein Held, sammle Gegenstände, besiege alle Kreaturen und besiege den Boss mit verschiedenen Fähigkeiten und rette die Welt!",
+    "joinDescription": "Melden Sie sich an und verwenden Sie diese Aufgabenmanager-App, die vom Kanban-System inspiriert ist. Erstellen, aktualisieren und löschen Sie Ihre Aufgaben. Weisen Sie sie Benutzern zu und organisieren Sie Ihr Projekt nach Kategorien und Status.",
+    "pokedexDescription": "Eine Bibliothek für alle Pokémons. Erhalten Sie viele Informationen über die Taschenmonster oder suchen Sie nach einem bestimmten. Basierend auf der PokéAPI.",
+    "portfolioDescription": "Ein einfaches Ein-Seiten-Portfolio, um mich vorzustellen und meine Projekte potenziellen Kunden / Unternehmen / Recruitern zu zeigen."
+  },
+  "contactComponent": {
+    "getInTouch": "KONTAKTIERE MICH",
+    "contact": "Kontakt",
+    "yourName": "Dein Name",
+    "namePlaceholder": "Wie heißt du?",
+    "nameValidation": "Bitte sag mir, wer du bist.",
+    "yourEmail": "Deine E-Mail",
+    "emailPlaceholder": "Wie lautet deine E-Mail?",
+    "emailValidation": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "yourMessage": "Deine Nachricht",
+    "messagePlaceholder": "Was ist deine Nachricht?",
+    "messageValidation": "Deine Nachricht fehlt, bitte fülle sie aus!",
+    "isRead": "Ich habe die",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "acceptPrivacyPolicy": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "privacyValidation": "Bitte akzeptiere die Datenschutzrichtlinie, um deine Nachricht zu senden.",
+    "sendButton": "SENDEN"
+  },
+  "userFeedback": {
+    "messageSent": "Ihr Nachricht wurde erfolgreich abgeschickt",
+    "messageError": "Ihr Nachricht konnte nicht verschickt werden, bitte versuchen Sie es nochmal"
+  }
+}

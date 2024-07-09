@@ -11,6 +11,8 @@
 
     >section {
         @include f.flex(center);
+        width: 90%;
+        max-width: 1920px
     }
 }
 
@@ -24,7 +26,6 @@
 .my-skills {
     @include f.flex(center);
     flex-direction: column;
-    max-width: 30vw;
     padding-left: 54px;
     color: white;
     ;
@@ -33,6 +34,10 @@
         font-size: 90px;
         text-align: center;
         width: max-content;
+    }
+
+    >h2.fr, h2.de{
+        width: unset;
     }
 
     >span {
@@ -50,7 +55,7 @@
 
 @media screen and (max-width:1300px) {
     .skill-list {
-        max-width: 60%;
+        max-width: 90%;
     }
 }
 
@@ -97,6 +102,11 @@
 
 @media screen and (max-width: 400px) {
     .my-skills {
+
+        >h2.fr{
+            font-size: 40px;
+        }
+
         >span {
             max-width: 300px;
         }

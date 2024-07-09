@@ -1,0 +1,64 @@
+{
+  "headerComponent": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "landingPageComponent": {
+    "I": "Je m'appelle",
+    "helloWorld": "Bonjour le monde!",
+    "ambitionedDeveloper": "développeur ambitieux!",
+    "getInTouch": "Contactez-moi!"
+  },
+  "aboutMeComponent": {
+    "aboutMe": "À propos de moi",
+    "description": "Salut! Je suis un développeur Front-End vivant à Jüchen, en Allemagne. J'aime donner vie aux idées et aux visions, avec précision et passion. Le code croît continuellement et j'ai hâte de continuer à grandir avec lui, grâce à un poste de développeur junior.",
+    "developing": "Développer, c'est construire, et j'adore ça. Que ce soit virtuel ou réel, je fais de mon mieux pour tout construire de la meilleure façon possible et je suis toujours fier de voir un projet évoluer et de regarder le résultat final.",
+    "interests": "J'ai beaucoup d'intérêts! Lire, me promener, jouer à des jeux (jeux de société et jeux vidéo), discuter du monde. J'aime les activités qui me font réfléchir. Je fais du sport et je suis toujours heureux d'être avec ma famille. Et naturellement, j'aime coder!"
+  },
+  "skillsComponent": {
+    "mySkills": "Mes Compétences",
+    "skillsDescription": "J'ai réalisé des projets avec diverses technologies et concepts front-end, acquérant une expérience précieuse.",
+    "contactButton": "discutons"
+  },
+  "languagesComponent": {
+    "spokenLanguages": "Langues parlées",
+    "english": "Anglais",
+    "german": "Allemand",
+    "french": "Français"
+  },
+  "portfolioComponent": {
+    "myWork": "Mon Travail"
+  },
+  "projectComponent": {
+    "liveTestLink": "Test en direct",
+    "fantasiaAdventureDescription": "Un jeu d'aventure plateforme 2D, de type saut et course, principalement basé sur JavaScript et OOP. Soyez un héros, collectez des objets, battez toutes les créatures et vainquez le Boss en utilisant différentes compétences et sauvez le monde !",
+    "joinDescription": "Connectez-vous et utilisez cette application de gestion des tâches inspirée du système Kanban. Créez, mettez à jour et supprimez vos tâches. Assignez-les à des utilisateurs et organisez votre projet par catégories et statuts.",
+    "pokedexDescription": "Une bibliothèque pour tous les Pokémons. Obtenez de nombreuses informations sur les monstres de poche ou recherchez-en un spécifique. Basé sur la PokéAPI.",
+    "portfolioDescription": "Un portfolio d'une page simple pour me présenter et partager mes projets avec des clients potentiels / entreprises / recruteurs."
+  },
+  "contactComponent": {
+    "getInTouch": "ENTRER EN CONTACT",
+    "contact": "Contact",
+    "yourName": "Votre Nom",
+    "namePlaceholder": "Quel est votre nom?",
+    "nameValidation": "Veuillez me dire qui vous êtes",
+    "yourEmail": "Votre Email",
+    "emailPlaceholder": "Quel est votre email?",
+    "emailValidation": "Veuillez entrer une adresse email valide",
+    "yourMessage": "Votre Message",
+    "messagePlaceholder": "Quel est votre message?",
+    "messageValidation": "Votre message est manquant, veuillez le remplir!",
+    "isRead": "J'ai lu la",
+    "privacyPolicy": "politique de confidentialité",
+    "acceptPrivacyPolicy": "et j'accepte le traitement de mes données comme indiqué.",
+    "privacyValidation": "Veuillez accepter la politique de confidentialité pour envoyer votre message.",
+    "sendButton": "ENVOYER"
+  },
+  "userFeedback": {
+    "messageSent": "Votre message à été envoyé avecc succès",
+    "messageError": "Votre message n'a pas pu être envoyé, merci de réessayer"
+  }
+}
