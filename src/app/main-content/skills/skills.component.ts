@@ -29,52 +29,52 @@ export class SkillsComponent implements OnInit{
     {
       name: 'Angular',
       image: 'angular.png',
-      link: '',
+      link: 'https://angular.dev/',
     },
     {
       name: 'TypeScript',
       image: 'typescript.png',
-      link: '',
+      link: 'https://www.typescriptlang.org/',
     },
     {
       name: 'JavaScript',
       image: 'javascript.png',
-      link: '',
+      link: 'https://www.javascript.com/',
     },
     {
       name: 'HTML',
       image: 'html.png',
-      link: '',
+      link: 'https://html.com/',
     },
     {
       name: 'Firebase',
       image: 'firebase.png',
-      link: '',
+      link: 'https://firebase.google.com/',
     },
     {
       name: 'GIT',
       image: 'git.png',
-      link: '',
+      link: 'https://git-scm.com/',
     },
     {
       name: 'CSS',
       image: 'css.png',
-      link: '',
+      link: 'https://www.w3.org/Style/CSS/Overview.en.html',
     },
     {
       name: 'Rest-Api',
       image: 'rest-api.png',
-      link: '',
+      link: 'https://restfulapi.net/',
     },
     {
       name: 'Scrum',
       image: 'scrum.png',
-      link: '',
+      link: 'https://www.scrum.org/',
     },
     {
       name: 'Material Design',
       image: 'material-design.png',
-      link: '',
+      link: 'https://m3.material.io/',
     },
   ];
 }
