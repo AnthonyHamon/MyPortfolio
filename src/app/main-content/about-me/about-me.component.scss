@@ -83,15 +83,12 @@ section {
 
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 
     :host {
         height: unset;
     }
 
-    .about-me-section {
-        height: unset;
-    }
 
     section {
         height: unset;
@@ -109,6 +106,12 @@ section {
 }
 
 @media screen and (max-width: 680px) {
+
+    .about-me-section {
+        height: unset;
+    }
+
+
     section {
         .about-me {
             margin-top: 60px;
@@ -226,4 +229,21 @@ section {
             font-size: 11px !important;
         }
     }
+}
+
+@media screen and (min-width:800px) and (max-width:1024px) and (min-height:1180px) and (max-height:1368px){
+
+    section {
+
+        flex-direction: column-reverse;
+
+        .about-me{
+            font-size: 18px;
+        }
+
+        >img{
+            display: block;
+        }
+    }
+
 }

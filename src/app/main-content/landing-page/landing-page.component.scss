@@ -76,7 +76,7 @@
  }
 
 
- @media screen and (max-width: 1000px) {
+ @media screen and (max-width: 1024px) {
      .above-the-fold {
          flex-direction: column-reverse;
          align-items: center;
@@ -216,3 +216,23 @@
         width: unset !important;
     }
  }
+
+
+ @media screen and (min-width:800px) and (max-width:1024px) and (min-height:1180px) and (max-height:1368px){
+    .above-the-fold{
+        background-position: top right;
+        >img{
+            height: 870px;
+            margin-top: unset;
+        }
+    }
+ }
+
+ @media screen and (width:1280px) and (height:800px){
+ 
+    .above-the-fold{
+        >img{
+            height: 750px !important;
+        }
+    }
+}
