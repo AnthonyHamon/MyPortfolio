@@ -1,4 +1,3 @@
-
 @use '../../../../styles.scss' as f;
 
 $main-width: 100%;
@@ -104,21 +103,16 @@ $main-width: 100%;
 
 @media screen and (max-width:1440px) {
 
-    .project-description{
-            .links{
-                flex-direction: row;
-                align-items: center;
-            }
+    .project-description .links {
+        flex-direction: row;
+        align-items: center;
     }
-    
 }
 
 @media screen and (max-width:1280px) {
-    .project-card {
-        >img {
+    .project-card >img {
             width: 100%;
             height: 300px;
-        }
     }
 
     .reverse-project-description {
@@ -128,6 +122,7 @@ $main-width: 100%;
         >div {
 
             padding-left: 54px;
+
             >span {
                 text-align: end;
             }
@@ -142,28 +137,30 @@ $main-width: 100%;
 
 
 @media screen and (max-width:1150px) {
-    :host{
+    :host {
         justify-content: center;
     }
 
-    .project-card{
+    .project-card {
         flex-direction: column;
         justify-content: center;
         width: 90%;
         height: 90%;
 
-        >img{
+        >img {
             width: 100%;
             height: 100%;
         }
     }
 
-    .project-description, .reverse-project-description{
+    .project-description,
+    .reverse-project-description {
         padding: 0 54px 54px;
 
-        >div{
+        >div {
             padding-left: 0;
-            >p{
+
+            >p {
                 padding-right: 0;
             }
         }
@@ -173,39 +170,37 @@ $main-width: 100%;
 
 
 @media screen and (max-width:680px) {
-    .project-card{
+    .project-card {
         width: 100%;
         height: 100%;
         gap: 24px;
     }
 
-    .project-description, .reverse-project-description{
+    .project-description,
+    .reverse-project-description {
         padding: 0 24px 24px;
     }
 }
 
 @media screen and (max-width:380px) {
-    .project-description{
-        >div{
-            >h3{
+    .project-description >div {
+            >h3 {
                 font-size: 28px;
             }
 
-            >span{
+            >span {
                 font-size: 20px;
             }
 
-            >p{
+            >p {
                 font-size: 14px;
             }
 
-            a{
+            a {
                 font-size: 14px;
             }
-        }
-
-        #liveTestLink{
-            padding: 8px;
-        }
+    }
+    #liveTestLink {
+        padding: 8px;
     }
 }
