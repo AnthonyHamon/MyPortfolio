@@ -49,6 +49,5 @@ export class LanguagesMenuComponent {
     this.languages[index].isSelected = true;
     this.translate.use(language);
     this.currentLanguage = language;
-    console.log(this.translate)
   }
 }
