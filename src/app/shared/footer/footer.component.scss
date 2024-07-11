@@ -7,31 +7,33 @@ footer {
     @include f.flex(center, start);
 
     .footer {
-        display: flex;
-        justify-content: start;
-        align-items: start;
+        @include f.flex(center, center);
         flex-direction: column;
         color: white;
         width: 100%;
-        max-width: f.$maxWidth; 
 
 
         >hr {
             align-self: center;
-            width: 80%;
+            width: 100%;
         }
 
 
         >section {
-            @include f.flex(space-between);
+            @include f.flex(center);
             width: 100%;
+            max-width: f.$maxWidth;
             padding: 36px 0;
 
-            >a {
-                >img {
-                    width: 250px;
-                    height: 65px;
-                    object-fit: contain;
+            >div {
+                @include f.flex(space-between, center);
+                width: 100%;
+                >a {
+                    >img {
+                        width: 250px;
+                        height: 65px;
+                        object-fit: contain;
+                    }
                 }
             }
         }
@@ -61,8 +63,8 @@ footer {
 
 
 @media screen and (max-width: 560px) {
-    .footer{
-        >section{
+    .footer {
+        >section {
             flex-direction: column;
             gap: 24px;
         }

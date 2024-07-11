@@ -60,5 +60,9 @@
   "userFeedback": {
     "messageSent": "Ihr Nachricht wurde erfolgreich abgeschickt",
     "messageError": "Ihr Nachricht konnte nicht verschickt werden, bitte versuchen Sie es nochmal"
-  }
+  },
+  "PRIVACY_POLICY_CONTENT": ""
+
+
+  
 }

@@ -11,7 +11,7 @@
                     <label for="name">{{"contactComponent.yourName" | translate}}</label>
                     <input #name="ngModel" minlength="3" [(ngModel)]="contactData.name" name="name" type="text"
                         [placeholder]="namePlaceholder | translate" required autocomplete="off">
-                    @if (!name.valid && contactForm.submitted) {
+                    @if (!name.valid && name.touched) {
                     <span class="validation-ctn">{{"contactComponent.nameValidation" | translate}}</span>
                     }
                 </div>
@@ -20,7 +20,7 @@
                     <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email"
                         [placeholder]="emailPlaceholder | translate" required
                         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" autocomplete="off">
-                    @if (!email.valid && contactForm.submitted) {
+                    @if (!email.valid && email.touched) {
                     <span class="validation-ctn">{{"contactComponent.emailValidation" | translate}}</span>
                     }
                 </div>
@@ -28,7 +28,7 @@
                     <label for="name">{{"contactComponent.yourMessage" | translate}}</label>
                     <textarea #message="ngModel" class="invisible-scrollbar" [(ngModel)]="contactData.message"
                         name="message" type="text" [placeholder]="messagePlaceholder | translate" required></textarea>
-                    @if (!message.valid && contactForm.submitted) {
+                    @if (!message.valid && message.touched) {
                     <span class="validation-ctn">{{"contactComponent.messageValidation" | translate}}</span>
                     }
                 </div>
@@ -45,7 +45,7 @@
                     }
                 </div>
             </section>
-            <button [disabled]="!checked" type="submit">{{ "contactComponent.sendButton" | translate }}<img
+            <button [disabled]="contactForm.invalid" type="submit">{{ "contactComponent.sendButton" | translate }}<img
                     src="assets/icons/email-send-white.png" alt=""></button>
         </form>
     </section>
