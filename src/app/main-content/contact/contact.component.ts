@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { UserFeedbackComponent } from '../user-feedback/user-feedback.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { slideInLeftAnimation, slideInRightAnimation } from 'angular-animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-contact',
@@ -10,16 +12,58 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   imports: [FormsModule, UserFeedbackComponent, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
-  animations: [],
+  animations: [
+    trigger('slideIn', [
+      state('hidden', style({
+        transform: 'translateX(-100%)',
+        opacity: 0
+      })),
+      state('visible', style({
+        transform: 'translateX(0)',
+        opacity: 1
+      })),
+      transition('hidden => visible', [
+        animate('0.5s ease-in')
+      ]),
+    ])
+  ],
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit, OnDestroy{
+
+  isVisible = false;
+  private observer: any;
+
+  constructor(private el: ElementRef, ) {}
+
+  ngOnInit() {
+    const formElement = this.el.nativeElement.querySelector('#contactForm');
+    if (formElement) {
+      this.observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            this.isVisible = true;
+          } else {
+            this.isVisible = false;
+          }
+        });
+      }, { threshold: 0.1 });
+      this.observer.observe(formElement);
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
+
 
   http = inject(HttpClient);
 
   userFeedbackPopup = false;
   positiveUserFeedback = false;
 
-  checked= false;
+  checked = false;
 
 
   contactData = {
@@ -34,7 +78,7 @@ export class ContactComponent {
 
 
 
-  mailTest = false; 
+  mailTest = true;
 
   post = {
     endPoint: 'https://anthony-hamon.com/sendMail.php',
@@ -63,7 +107,7 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     }
-     else if (ngForm.submitted && this.mailTest) {
+    else if (ngForm.submitted && this.mailTest) {
       this.showUserFeedbackPopup(ngForm);
       this.positiveUserFeedback = true;
 
@@ -72,7 +116,7 @@ export class ContactComponent {
 
 
   showUserFeedbackPopup(ngForm: NgForm) {
-      this.userFeedbackPopup = true;
+    this.userFeedbackPopup = true;
     setTimeout(() => {
       this.userFeedbackPopup = false;
       ngForm.resetForm();

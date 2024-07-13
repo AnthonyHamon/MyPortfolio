@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialLinksBarComponent } from './social-links-bar/social-links-bar.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { CommonEngine } from '@angular/ssr';
 import { CommonModule } from '@angular/common';
 
 
@@ -10,7 +9,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [SocialLinksBarComponent, TranslateModule, CommonModule],
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+  styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent implements OnInit {
 

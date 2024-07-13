@@ -17,11 +17,12 @@
             @include f.flex(start, start);
             flex-direction: column;
             gap: 16px;
-            padding: 54px;
+            padding: 36px;
             background-color: #292929;
             border-radius: 24px;
             color: white;
             flex-grow: 0.25;
+            max-height: 800px;
 
 
             >section {
@@ -50,7 +51,7 @@
         @include f.flex(start, start);
         flex-direction: column;
         width: 100%;
-        gap: 16px;
+        gap: 8px;
         padding: 16px;
         border-radius: 8px;
         border-style: none;
