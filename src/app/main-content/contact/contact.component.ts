@@ -2,9 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, inject, OnDestroy, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { UserFeedbackComponent } from '../user-feedback/user-feedback.component';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { slideInLeftAnimation, slideInRightAnimation } from 'angular-animations';
+import { TranslateModule } from '@ngx-translate/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+
 
 @Component({
   selector: 'app-contact',
@@ -31,13 +31,12 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 export class ContactComponent implements OnInit, OnDestroy{
 
   isVisible = false;
-  private observer: any;
+  private observer!: IntersectionObserver;
 
-  constructor(private el: ElementRef, ) {}
+  constructor(private el: ElementRef) {}
 
   ngOnInit() {
     const formElement = this.el.nativeElement.querySelector('#contactForm');
-    if (formElement) {
       this.observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -48,8 +47,7 @@ export class ContactComponent implements OnInit, OnDestroy{
         });
       }, { threshold: 0.1 });
       this.observer.observe(formElement);
-    }
-  }
+}
 
   ngOnDestroy() {
     if (this.observer) {
@@ -78,7 +76,7 @@ export class ContactComponent implements OnInit, OnDestroy{
 
 
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://anthony-hamon.com/sendMail.php',
